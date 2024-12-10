@@ -203,7 +203,7 @@
   border: hidden;
   border-radius: 0px 5px 5px 0px;
   background-color: transparent;
-  background-image: url("..Images/icons/search\ icon.jpg");
+  background-image: url("../Images/icons/search\ icon.jpg");
   background-position: center;
   background-size: 25px;
   background-repeat: no-repeat;
@@ -227,7 +227,7 @@
   position: relative;
   z-index: 300;
   background-color: rgb(234, 234, 234);
-  background-image: url("..Images/icons/Close-icon\ black.png");
+  background-image: url("../Images/icons/Close-icon\ black.png");
   background-size: 18px;
 }
 
