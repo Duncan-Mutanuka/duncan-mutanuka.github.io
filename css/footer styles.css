@@ -1,0 +1,267 @@
+@media (max-width: 768px) {
+  .bottom-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+
+  .footer{
+    overflow: hidden;
+  }
+
+  .footer.active{
+    margin: 5px 5px 4px 4px;
+    overflow: hidden;
+  }
+
+  .information-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback-container {
+    max-width: 100%;
+    margin-top: 20px;
+    display: flex;
+  }
+
+  .textarea {
+    width: 100%;
+    height: 85px;
+    text-indent: 10px;
+    padding: 10px 0px;
+  }
+
+  .bottom-title {
+    margin-bottom: 5px;
+  }
+
+  .information-container {
+    margin-top: -20px;
+  }
+
+  .contact-us-container {
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .privacy {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 25px 10px 25px;
+    order: 1;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
+    order: -1;
+  }
+
+}
+
+@media (min-width: 480.1px) and (max-width: 768px) {
+
+  .privacy {
+    padding-left: 10px;
+    width: 250px;
+    padding-right: 10px;
+    justify-content: space-evenly;
+  }
+
+}
+
+@media (min-width: 768.1px) {
+  
+  .bottom-container {
+    margin-top: 5px;
+  }
+
+  .privacy {
+    padding-left: 10px;
+    width: 250px;
+    padding-right: 10px;
+    justify-content: space-evenly;
+  }
+
+  .textarea {
+    width: 240px;
+    height: 75px;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .feedback-container {
+    max-width: 100%;
+  }
+
+  .bottom-title {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+.bottom-container {
+  height: auto;
+  max-width: 100%;
+  z-index: 10;
+  padding: 10px;
+  transition: margin 0.35s;
+}
+
+.sign-in-text:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.347) inset !important;
+  border-radius: 5px;
+}
+
+
+.socials-container {
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 2px 5px 2px 5px;
+  border-radius: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.social-button:hover {
+  transform: translate(-2px, 2px);
+  transition: 0.2s;
+}
+
+.social-button:active {
+  opacity: 0.6;
+}
+
+
+.about-us-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+}
+
+.about-us {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+}
+
+
+
+.footer-container {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px 0px 20px 0px;
+  transition: margin 0.35s;
+  text-align: center;
+}
+
+.privacy {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  list-style: none;
+}
+
+.privacy-text {
+  color: white;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.privacy-text:hover {
+  opacity: 0.8;
+}
+
+.copyright {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.04s;
+}
+
+
+.information-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.contact-us-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+}
+
+.bottom-title {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textarea {
+  border-radius: 5px;
+  background-color: transparent;
+  resize: none;
+  transition: 0.3s;
+}
+
+

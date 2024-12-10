@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="shortcut icon" href="Images/icons/snow clowd.png" />
+  <link rel="stylesheet" href="CSS/home.css" />
+  <link rel="stylesheet" href="CSS/sidebar styles.css" />
+  <link rel="stylesheet" href="CSS/general styles.css" />
+  <link rel="stylesheet" href="css/footer styles.css" />
+  <link rel="stylesheet" href="CSS/dark video styles.css" />
+  <link rel="stylesheet" href="CSS/header.css" />
+  <script src="JS/popups and glow.js" defer></script>
+  <script src="JS/header.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="content">
+
+    <button onclick="location.href='#';" class="logo-container"></button>
+
+    <button onclick="location.href='#';" class="dropdown-bar-container" id="showSideBar">
+      <div class="dropdown-bar"></div>
+      <div class="dropdown-bar"></div>
+      <div class="dropdown-bar"></div>
+    </button>
+
+    
+    <div class="sidebar" id="sideBar">
+      <div class="sidebar-container">
+
+      <button onclick="location.href='#';">
+        <div class="sidebar-link">
+          <img class="sidebar-icon" src="Images/icons/Home.svg" alt="Home" title="Home">
+          <p>Home</p>
+        </div>
+      </button>
+      <button id="toggleSearchbar">
+        <div class="sidebar-link" title="Search">
+          <img class="search-icon sidebar-icon" src="Images/icons/search icon.jpg" alt="">
+          <p>Search</p>
+        </div>
+      </button>
+      <button onclick="location.href='#';">
+        <div class="sidebar-link" title="Units">
+          <img class="sidebar-icon" src="Images/icons/Temperature.svg" alt="Water Level">
+          <p>Units</p>
+        </div>
+      </button>
+      <button onclick="location.href='#';">
+        <div class="sidebar-link" title="Favorites">
+          <img class="sidebar-icon" src="Images/icons/Heart.svg" alt="Snow Level">
+          <p>Favorites</p>
+        </div>
+      </button>
+      <button onclick="location.href='#bottomContainer';">
+        <div class="sidebar-link" title="About">
+          <img class="sidebar-icon" src="Images/icons/Question mark.svg" alt="About">
+          <p>About</p>
+        </div>
+      </button>
+
+      </div>
+    </div>
+
+    <div class="search-container" id="searchBar">
+      <div method="post" class="search-bar">
+        <input class="search-box" type="search" placeholder="Search city, state, town..." id="searchBox" name="search">
+        <button class="search-button" type="submit" id="searchButton"></button>
+        <button id="hideSearchbar"></button>
+      </div>
+      <div id="suggestions"></div>
+    </div>
+
+    <div class="main-weather-container" id="content">
+
+      <div class="current-weather-tile-container">
+        <div class="current-weather-tile" id="current-weather-tile">
+          <div class="current-day">
+            <p id="day">Today</p>
+          </div>
+
+          <div class="current-temperature">
+            <p id="temperature">0<sup>o</sup>C</p>
+            <div id="weather-icon" class="fas fa-sun"></div>
+          </div>
+
+
+          <div class="current-temp">
+            <p class="current-wind-speed" id="wind">Wind Speed: 0m/s</p>
+            <p class="current-condition" id="humidity">Humidity: 0%</p>
+            <p class="current-condition" id="description">Condition</p>
+          </div>
+          <div class="current-time-container">
+            <p class="current-time" id="time">Time</p>
+            <p class="city current-city" id="location">Location</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-tile-container" id="forecast">
+
+        <div class="weather-tile">
+          <div class="day">
+            <p>Tomorrow</p>
+            <div id="weather-icon" class="fas fa-sun weather-condition-icon"></div>
+          </div>
+          <div class="temp">
+            <p class="condition">Condition</p>
+            <p class="temperature">0<sup>o</sup>C</p>
+          </div>
+          <div class="wind-speed">Wind Speed: 0m/s</div>
+          <div class="wind-speed">Humidity: 0%</div>
+          <div class="time-container">
+            <p class="time">Time</p>
+            <p class="city">Location</p>
+          </div>
+        </div>
+
+        <div class="weather-tile">
+          <div class="day">
+            <p>Day 3</p>
+            <div id="weather-icon" class="fas fa-sun weather-condition-icon"></div>
+          </div>
+          <div class="temp">
+            <p class="condition">Condition</p>
+            <p class="temperature">0<sup>o</sup>C</p>
+          </div>
+          <div class="wind-speed">Wind Speed: 0m/s</div>
+          <div class="wind-speed">Humidity: 0%</div>
+          <div class="time-container">
+            <p class="time">Time</p>
+            <p class="city">Location</p>
+          </div>
+        </div>
+
+        <div class="weather-tile">
+          <div class="day">
+            <p>Day 4</p>
+            <div id="weather-icon" class="fas fa-sun weather-condition-icon"></div>
+          </div>
+          <div class="temp">
+            <p class="condition">Condition</p>
+            <p class="temperature">0<sup>o</sup>C</p>
+          </div>
+          <div class="wind-speed">Wind Speed: 0m/s</div>
+          <div class="wind-speed">Humidity: 0%</div>
+          <div class="time-container">
+            <p class="time">Time</p>
+            <p class="city">Location</p>
+          </div>
+        </div>
+
+        <div class="weather-tile">
+          <div class="day">
+            <p>Day 5</p>
+            <div id="weather-icon" class="fas fa-sun weather-condition-icon"></div>
+          </div>
+          <div class="temp">
+            <p class="condition">Condition</p>
+            <p class="temperature">0<sup>o</sup>C</p>
+          </div>
+          <div class="wind-speed">Wind Speed: 0m/s</div>
+          <div class="wind-speed">Humidity: 0%</div>
+          <div class="time-container">
+            <p class="time">Time</p>
+            <p class="city">Location</p>
+          </div>
+        </div>
+      </div>
+      
+
+
+    </div>
+
+    <div class="bottom-container" id="bottomContainer">
+
+      <div class="information-container">
+
+        <div class="contact-us-container">
+          <h4 class="bottom-title">Contact Us</h4>
+          <a href="#" class="contact-us">mutanukaduncan@gmail.com</a>
+          <a href="#" class="contact-us">0972713982</a>
+          <a href="#" class="contact-us">Customer Service</a>
+          <a href="#" class="contact-us">Terms and Conditions</a>
+        </div>
+
+        <div class="feedback-container">
+          <h4 class="bottom-title">Give us your feedback</h4>
+          <textarea class="textarea" placeholder="Type your feedback here"></textarea>
+        </div>
+      </div>
+
+      <div class="socials-container">
+        <div class="socials" id="socials-light">
+          <a href="#" class="social-link"><img title="ICU Zambia" src="Images/icons/ICU logo.jpeg" alt="ICU Zambia"
+              class="social-button light-mode-image"></a>
+          <a href="#" class="social-link"><img title="ZRDC" src="Images/icons/ZRDC logo.jpeg" alt="ZRDC"
+              class="social-button light-mode-image"></a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+  </div>
+
+  <div class="footer-container">
+    <foooter class="footer" id="footer">
+
+      <div class="copyright">
+        <td align="middle"><span class="copyright">Kaoma. All Rights Reserved. Designed and 
+          Maintained 
+          By Mutanuka Duncan,SIN:2308264553</td>
+      </div>
+
+    </foooter>
+  </div>
+
+  <script>
+    document.getElementById('searchBox').addEventListener('input', function () {
+      let query = this.value;
+      if (query.length > 2) {
+        fetch(`https://api.openweathermap.org/data/2.5/find?q=${query}&type=like&sort=population&cnt=30&appid=9ff7a2e1a4fb2c4b8b21639890b04d7b`)
+          .then(response => response.json())
+          .then(data => {
+            displaySuggestions(data.list);
+          });
+      }
+    });
+
+    function displaySuggestions(locations) {
+      let suggestions = document.getElementById('suggestions');
+      suggestions.innerHTML = '';
+      locations.forEach(location => {
+        let div = document.createElement('div');
+        div.textContent = `${location.name}, ${location.sys.country}`;
+        div.addEventListener('click', function () {
+          document.getElementById('searchBox').value = this.textContent;
+          document.getElementById('suggestions').innerHTML = '';
+          document.getElementById('searchButton').click();
+        });
+        suggestions.appendChild(div);
+      });
+    }
+
+  </script>
+
+
+
+  <script>
+    const apiKey = 'b1814fc6fd3a1db61f97cf2e5d708a6b'; // Replace with your OpenWeatherMap API key
+    const defaultCity = 'Kaoma';
+    const currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
+    const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast';
+
+    let currentLocation = null;
+    let updateInterval = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                const { latitude, longitude } = position.coords;
+                currentLocation = { latitude, longitude };
+                fetchWeatherByCoords(latitude, longitude);
+                fetchForecastByCoords(latitude, longitude);
+                setUpdateInterval(() => {
+                    fetchWeatherByCoords(currentLocation.latitude, currentLocation.longitude);
+                    fetchForecastByCoords(currentLocation.latitude, currentLocation.longitude);
+                });
+            }, error => {
+                handleGeolocationError(error);
+                fetchWeather(defaultCity); // Fetch weather for the default city if geolocation fails
+                fetchForecast(defaultCity);
+            });
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+            fetchWeather(defaultCity); // Fetch weather for the default city if geolocation is not supported
+            fetchForecast(defaultCity);
+        }
+
+
+      function handleGeolocationError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            console.error("User denied the request for Geolocation.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            console.error("Location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            console.error("The request to get user location timed out.");
+            break;
+          case error.UNKNOWN_ERROR:
+            console.error("An unknown error occurred.");
+            break;
+        }
+      }
+    });
+
+    document.getElementById('searchButton').addEventListener('click', () => {
+      const location = document.getElementById('searchBox').value;
+      if (location) {
+        clearPreviousWeather();
+        fetchWeather(location);
+        fetchForecast(location);
+        currentLocation = null; // Reset current location to prevent auto-refresh from using it
+        setUpdateInterval(() => {
+          fetchWeather(location);
+          fetchForecast(location);
+        });
+      }
+    });
+
+    document.getElementById('searchBox').addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        const location = document.getElementById('searchBox').value;
+        if (location) {
+          clearPreviousWeather();
+          fetchWeather(location);
+          fetchForecast(location);
+          currentLocation = null; // Reset current location to prevent auto-refresh from using it
+          setUpdateInterval(() => {
+            fetchWeather(location);
+            fetchForecast(location);
+          });
+        }
+      }
+    });
+
+    function setUpdateInterval(callback) {
+      if (updateInterval) {
+        clearInterval(updateInterval);
+      }
+      updateInterval = setInterval(callback, 5000); // Update every 60 seconds
+    }
+
+    function clearPreviousWeather() {
+      document.getElementById('day').textContent = '';
+      document.getElementById('location').textContent = '';
+      document.getElementById('temperature').textContent = '';
+      document.getElementById('description').textContent = '';
+      document.getElementById('humidity').textContent = '';
+      document.getElementById('wind').textContent = '';
+      document.getElementById('time').textContent = '';
+      document.getElementById('forecast').innerHTML = ''; // Clear previous forecast
+    }
+
+    function fetchWeather(location) {
+      const url = `${currentWeatherUrl}?q=${location}&appid=${apiKey}&units=metric`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          updateCurrentWeather(data);
+        })
+        .catch(error => {
+          console.error('Error fetching weather data:', error);
+        });
+    }
+
+    function fetchWeatherByCoords(lat, lon) {
+      const url = `${currentWeatherUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          updateCurrentWeather(data);
+        })
+        .catch(error => {
+          console.error('Error fetching weather data:', error);
+        });
+    }
+
+    function fetchForecast(location) {
+      const url = `${forecastUrl}?q=${location}&appid=${apiKey}&units=metric`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          updateForecast(data);
+        })
+        .catch(error => {
+          console.error('Error fetching forecast data:', error);
+        });
+    }
+
+    function fetchForecastByCoords(lat, lon) {
+      const url = `${forecastUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          updateForecast(data);
+        })
+        .catch(error => {
+          console.error('Error fetching forecast data:', error);
+        });
+    }
+
+    function updateCurrentWeather(data) {
+      const day = new Date(data.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' });
+      document.getElementById('day').textContent = day;
+      document.getElementById('location').textContent = data.name;
+      document.getElementById('temperature').textContent = `${Math.round(data.main.temp)}°C`;
+      document.getElementById('description').textContent = data.weather[0].description;
+      document.getElementById('humidity').textContent = `Humidity: ${data.main.humidity}%`;
+      document.getElementById('wind').textContent = `Wind Speed: ${data.wind.speed} m/s`;
+      document.getElementById('time').textContent = `${new Date(data.dt * 1000).toLocaleTimeString()}`;
+
+      const weatherIcon = document.getElementById('weather-icon');
+      const weather = data.weather[0].main.toLowerCase();
+      updateWeatherIcon(weather, weatherIcon);
+      changeBackgroundImage(weather);
+      changeBackgroundcolor(weather);
+    }
+
+    function updateForecast(data) {
+      const forecastContainer = document.getElementById('forecast');
+      forecastContainer.innerHTML = ''; // Clear previous forecast
+      data.list.forEach((forecast, index) => {
+        if (index % 8 === 0 && index !== 0) { // Get forecast for every 24 hours, excluding the first day
+          const day = new Date(forecast.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' });
+          const time = new Date(forecast.dt * 1000).toLocaleTimeString();
+          const city = data.city.name;
+          const weather = forecast.weather[0].main.toLowerCase();
+          const forecastElement = document.createElement('div');
+          forecastElement.className = 'weather-tile';
+          forecastElement.innerHTML = `
+                <div class="day">
+                    <p>${day}</p>
+                    <div class="weather-condition-icon"></div>
+                </div>
+                <div class="temp">
+                    <p class="condition">Condition: ${forecast.weather[0].description}</p>
+                    <p class="temperature">${Math.round(forecast.main.temp)}<sup>o</sup>C</p>
+                </div>
+                <div class="wind-speed">Wind Speed: ${forecast.wind.speed} m/s</div>
+                <div class="wind-speed">Humidity: ${forecast.main.humidity}%</div>
+                <div class="time-container">
+                    <p class="time">${time}</p>
+                    <p class="city">${city}</p>
+                </div>
+            `;
+          forecastContainer.appendChild(forecastElement);
+
+          const weatherIcon = forecastElement.querySelector('.weather-condition-icon');
+          updateWeatherIcon(weather, weatherIcon);
+        }
+      });
+    }
+
+    function updateWeatherIcon(weather, weatherIcon) {
+      switch (weather) {
+        case 'clear':
+          weatherIcon.className = 'fas fa-sun weather-condition-icon';
+          break;
+        case 'clouds':
+          weatherIcon.className = 'fas fa-cloud weather-condition-icon';
+          break;
+        case 'rain':
+          weatherIcon.className = 'fas fa-cloud-showers-heavy weather-condition-icon';
+          break;
+        case 'snow':
+          weatherIcon.className = 'fas fa-snowflake weather-condition-icon';
+          break;
+        case 'thunderstorm':
+          weatherIcon.className = 'fas fa-bolt weather-condition-icon';
+          break;
+        default:
+          weatherIcon.className = 'fas fa-smog weather-condition-icon';
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+    // Function to change background image based on weather condition
+    function changeBackgroundImage(weatherCondition) {
+      const container = document.getElementById('current-weather-tile');
+      let backgroundColor = '';
+
+      switch (weatherCondition.toLowerCase()) {
+        case 'clear':
+          backgroundColor = 'rgba(247, 247, 247, 0.6)';
+          break;
+        case 'clouds':
+          backgroundColor = 'rgba(198, 198, 198, 0.6)';
+          break;
+        case 'rain':
+          backgroundColor = 'rgba(77, 77, 77, 0.6)';
+          break;
+        case 'snow':
+          backgroundColor = 'rgba(239, 239, 239, 0.6)';
+          break;
+        case 'thunderstorm':
+          backgroundColor = 'rgba(47, 0, 0, 0.6)';
+          break;
+        default:
+          backgroundColor = '';
+          break;
+      }
+
+      container.style.backgroundColor = backgroundColor;
+
+    }
+
+
+
+    function changeBackgroundcolor(weatherCondition) {
+      const sidebar = document.getElementById('sideBar');
+      let backgroundColor = '';
+
+      if (window.innerWidth >= 1024) {
+
+        switch (weatherCondition.toLowerCase()) {
+          case 'clear':
+            backgroundColor = 'rgba(247, 247, 247, 0.489)';
+            break;
+          case 'clouds':
+            backgroundColor = 'rgba(220, 220, 220, 0.6)';
+            break;
+          case 'rain':
+            backgroundColor = 'rgba(150, 150, 150, 0.6)';
+            break;
+          case 'snow':
+            backgroundColor = 'rgba(239, 239, 239, 0.6)';
+            break;
+          case 'thunderstorm':
+            backgroundColor = 'rgba(47, 0, 0, 0.6)';
+            break;
+          default:
+            backgroundColor = '';
+            break;
+        }
+
+        sidebar.style.backgroundColor = backgroundColor;
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+
+
+
+
+ 
+
+
+.dropdown-bar {
+  background-color: rgb(0, 0, 0);
+  transition: all 0.35s;
+}
+
+
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+.current-weather-tile {
+  background-color: rgba(244, 244, 244, 0.671);
+  transition: background-color 1.5s ease;
+}
+
+
+
+
+.current-weather-tile .current-temperature {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+
+
+
+.current-weather-tile .current-day {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+
+
+
+.current-weather-tile .current-condition {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+
+
+
+.current-weather-tile .current-wind-speed {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+
+
+
+.current-weather-tile .current-time {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+
+
+.current-weather-tile .current-city {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+
+
+
+.contact-us {
+  color: rgb(0, 0, 0);
+}
+
+.bottom-title {
+  color: rgb(0, 0, 0);
+}
+
+
+.textarea {
+  border: solid rgb(0, 0, 0) 1.5px;
+  color: rgb(0, 0, 0);
+}
+
+
+.textarea::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+
+.about-us {
+  color: rgb(0, 0, 0);
+  transition: color 0.5s;
+}
+
+.bottom-container {
+  background-color: rgba(244, 244, 244, 0.733);
+  transition: 0.35s;
+}
+
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: rgb(255, 255, 255);
+  transition: 0.35s;
+  padding-top: 10px;
+}
+
+
+::selection {
+  background-color: rgba(13, 13, 13, 0.742);
+  /* Background color of the highlight */
+  color: white;
+  /* Text color of the highlight */
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background-color: rgba(13, 13, 13, 0.742);
+  color: white;
+}

@@ -1,0 +1,279 @@
+
+@media(max-width: 768px) {
+
+  .search-container{
+    height: 45px;
+    width: 100%;
+    top: 10px;
+    flex-direction: row-reverse;
+  }
+
+  .search-box{
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .search-bar{
+    width: 100%;
+  }
+
+  .search-button{
+    width: 78px;
+  }
+
+  .default-location{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 3000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(0, 0, 0, 0.503);
+    color: rgb(255, 255, 255);
+    padding: 150px 10px 10px 10px;
+  }
+
+  .default-location-container{
+    padding: 70px 20px;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgba(87, 42, 42, 0.557);
+    border: solid rgba(255, 255, 255, 0.527) 1.5px;
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.531);
+  }
+
+  .default-location input{
+    height: 47px;
+    width: 100%;
+    padding: 0px 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(44, 44, 44);
+    color: white;
+  }
+
+  .default-location input::placeholder{
+   color: white;
+  }
+
+  .default-location button{
+    height: 47px;
+    width: 100px;
+    padding: 0px 10px;
+    border: none;
+    background-color: rgb(7, 7, 7);
+    margin-left: 5px;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+  }
+}
+
+
+
+
+@media (min-width: 768.1px) {
+
+  .search-container{
+    height: 50px;
+  }
+
+  .search-box{
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .search-bar{
+    width: 670px;
+  }
+
+  .search-button{
+    width: 98px;
+  }
+
+  .default-location{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 3000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(0, 0, 0, 0.503);
+    color: rgb(255, 255, 255);
+  }
+
+  .default-location-container{
+    padding: 90px 70px;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgba(189, 189, 189, 0.557);
+    border: solid rgba(255, 255, 255, 0.527) 1.5px;
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.531);
+  }
+
+  .default-location input{
+    height: 47px;
+    width: 470px;
+    padding: 0px 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(44, 44, 44);
+  }
+
+  .default-location input::placeholder{
+   color: white;
+  }
+
+  .default-location button{
+    height: 47px;
+    width: 100px;
+    padding: 0px 10px;
+    border: none;
+    background-color: rgb(7, 7, 7);
+    margin-left: 5px;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+  }
+}
+
+.search-container{
+  opacity: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: -10;
+  right: 50%;
+  top: 6px;
+  transform: translate(50%);
+  transition: top 0.2s ease;
+}
+
+
+.search-bar{
+  position: relative;
+  height: 100%;
+  display: flex;
+  border: solid rgba(0, 0, 0, 0.178) 1.5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: rgb(234, 234, 234);
+  transition: border-bottom-right-radius 0.35s ease, right 0.35s ease;
+  margin: 0px 5px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+
+.search-box{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0px 22px;
+  font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.search-box:-webkit-autofill,
+.search-box:-webkit-autofill:hover,
+.search-box:-webkit-autofill:focus,
+.search-box:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px rgb(222, 222, 222) inset !important;
+}
+
+
+.search-box::placeholder{
+  text-indent: 10px;
+  font-size: 15px;
+}
+
+ 
+
+.search-button{
+  height: 100%;
+  border: hidden;
+  border-radius: 0px 5px 5px 0px;
+  background-color: transparent;
+  background-image: url("../Images/icons/search\ icon.jpg");
+  background-position: center;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#toggleSearchbar{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+#hideSearchbar{
+  width: 100px;
+  height: 100%;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.35s ease;
+  position: relative;
+  z-index: 300;
+  background-color: rgb(234, 234, 234);
+  background-image: url("../images/icons/Close-icon\ black.png");
+  background-size: 18px;
+}
+
+#hideSearchbar {
+  border-left: solid rgba(0, 0, 0, 0.178) 1.5px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  #suggestions{
+    box-sizing: border-box;
+    left: 5px;
+    right: 5px;
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 768.1px) {
+  #suggestions{
+    margin-left: 5px;
+    width: 670px;
+  }
+}
+
+
+#suggestions {
+  text-align: left;
+  max-height: 250px;
+  overflow-y: auto;
+  position: absolute;
+  top: 54px;
+  background-color: white;
+  font-family: 'Nunito', sans-serif;
+  border-radius: 3px;
+  border: solid rgba(0, 0, 0, 0.178) 1.5px;
+}
+
+#suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#suggestions div:hover {
+  background-color: #f8f8f8;
+}
+
